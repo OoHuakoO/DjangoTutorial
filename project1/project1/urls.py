@@ -17,6 +17,9 @@ Including another URLconf
 from django.urls import path
 from . import views
 urlpatterns = [
-    path('search/<int:count>/', views.index),
-    path('about/',views.about)
+    path('', views.index),
+    path('search/<str:keyword>/<int:page>/',views.search),
+    path('date/<int:year>-<int:month>-<int:day>/',views.date),
+    path('redirect/<path:url>/',views.redirect),
+    path('article/<int:id>/<slug:title>/',views.show_acticle)
 ]
