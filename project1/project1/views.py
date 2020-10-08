@@ -1,1 +1,1 @@
-from django.http import HttpRespones
+from django.http import HttpResponse
