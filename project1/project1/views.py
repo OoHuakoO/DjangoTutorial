@@ -1,6 +1,6 @@
 from django.http import HttpResponse
-def index(request,count):
-    return HttpResponse(f'welcome:{count}')
+def index(request):
+    return HttpResponse(f'welcome:')
 def search(request,keyword,page):
     return HttpResponse(f'Search for:{keyword} page:{page}')
 def redirect(request,url):
