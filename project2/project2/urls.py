@@ -19,6 +19,6 @@ from . import views
 urlpatterns = [
     path('',views.index),
     re_path(r'^drink/(?P<dnk>(coffee)|(tea)|(wine))/$',views.drink),
-    re_path(r'^title/(?P<title>[-\w\s]+)/%',views.show_title),
+    re_path(r'^title/(?P<title>[-\w\s]+)/$',views.show_title),
     re_path(r'^find/(?P<key>[\w\s]+)/(?P<page>\d+)/$',views.find)
 ]

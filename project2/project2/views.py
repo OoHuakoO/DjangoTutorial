@@ -12,5 +12,6 @@ def find(request,key,page):
         prev = f'<a href="/find/{key}/{page-1}">Previous</a>'
     else:
         prev = ''
+
     next = f'<a href="/find/{key}/{page+1}">Next</a>'
-    return HttpRespones(f'{prev}&nbsp;&nbsp;&nbsp;{next}')
+    return HttpResponse(f'{prev} &nbsp;&nbsp;&nbsp; {next}')
