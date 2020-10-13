@@ -18,7 +18,9 @@ from django.urls import path,re_path
 from . import views
 urlpatterns = [
     path('',views.index),
+    path('map/',views.map),
     re_path(r'^drink/(?P<dnk>(coffee)|(tea)|(wine))/$',views.drink),
     re_path(r'^title/(?P<title>[-\w\s]+)/$',views.show_title),
-    re_path(r'^find/(?P<key>[\w\s]+)/(?P<page>\d+)/$',views.find)
+    re_path(r'^find/(?P<key>[\w\s]+)/$(?P<page>\d+)/$',views.find)
+    
 ]

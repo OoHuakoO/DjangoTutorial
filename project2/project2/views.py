@@ -12,6 +12,8 @@ def find(request,key,page):
         prev = f'<a href="/find/{key}/{page-1}">Previous</a>'
     else:
         prev = ''
-
     next = f'<a href="/find/{key}/{page+1}">Next</a>'
     return HttpResponse(f'{prev} &nbsp;&nbsp;&nbsp; {next}')
+def map(request):
+    type = request.GET.get('type','default') # สามารถกำหนดค่า defaultได้เมื่อค่า parameterใน urlไม่ได้ใส่
+    return HttpResponse(f'May type:{type}')
