@@ -10,7 +10,7 @@ def detail(request):
 def order(request):
     return render(request,'product/order.html')
 
-def test(request): # ฟังกชันสำหรับการส่งตัวแปรไปยัง template
+def variable(request): # ฟังกชันสำหรับการส่งตัวแปรไปยัง template
     dt = date.today()
     data = {
          'title':'Django framework',
@@ -19,4 +19,4 @@ def test(request): # ฟังกชันสำหรับการส่ง�
         'flowers' : {'a':'rose','b':'jasmine','c':'orchid'},
         'date': dt
     }
-    return render(request,'test.html',data)
+    return render(request,'variable.html',data)
