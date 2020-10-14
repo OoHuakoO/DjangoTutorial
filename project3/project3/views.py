@@ -27,3 +27,13 @@ def tag_if(request):
         'guest_goals': 2,
     }
     return render(request, 'tag-if.html', vars)
+    
+def tag_for(request):
+    vars = {
+        'range': range(1, 6),
+        'list': ['red', 'green', 'blue', 'yellow'],
+        'dict': {'a':'ant', 'b':'boy', 'c':'cat', 'd':'dog'}
+    }
+    return render(request, 'tag-for.html', vars)
+
+    

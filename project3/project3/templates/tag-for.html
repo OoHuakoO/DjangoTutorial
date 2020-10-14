@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    {% for x in range %}
+        <div>{{ x }}</div>
+    {% endfor %}
+    <ul> 
+    {% for item in list %}
+        <li>{{item}}</li>
+    {% endfor %}
+    </ul>
+
+ {% for k ,v in dict.items %}  <!-- print dict.items -->
+	    <div>{{ k }} :{{v}}</div>
+    {% endfor %}
+    <br>
+
+     {% for k in dict.keys %}  <!-- print dict.keys -->
+	    <div>{{ k }}</div>
+    {% endfor %}
+    <br>
+     {% for k in dict.values %} <!-- print dict.values -->
+	    <div>{{ k }}</div>
+    {% endfor %}
+
+    </div>
+</body>
+</html>
