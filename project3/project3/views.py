@@ -20,3 +20,10 @@ def variable(request): # ฟังกชันสำหรับการส่�
         'date': dt
     }
     return render(request,'variable.html',data)
+
+def tag_if(request):
+    vars = {
+        'home_goals': 3, 
+        'guest_goals': 2,
+    }
+    return render(request, 'tag-if.html', vars)

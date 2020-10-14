@@ -21,5 +21,6 @@ urlpatterns = [
     path('about/',views.about),
     path('detail/',views.detail),
     path('order/',views.order),
-    path('variable/',views.variable)
+    path('variable/',views.variable),
+    path('tag/if/', views.tag_if)
 ]
