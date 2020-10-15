@@ -9,6 +9,8 @@
     <div>
     {% for x in range %}
         <div>{{ x }}</div>
+        {% empty %}  <!-- ใช้สำหรับแสดงผลตอนนที่ไม่มีข้อมูลให้วนลูป -->
+        No Data   
     {% endfor %}
     <ul> 
     {% for item in list %}
@@ -25,9 +27,16 @@
 	    <div>{{ k }}</div>
     {% endfor %}
     <br>
-     {% for k in dict.values %} <!-- print dict.values -->
+
+     {% for k in dict.values  %} <!-- print dict.values -->
 	    <div>{{ k }}</div>
     {% endfor %}
+ <br>
+
+     {% for k in dict.values reversed %} <!-- print dict.values ย้อนกลับ -->
+	    <div>{{ k }}</div>
+    {% endfor %}
+
 
     </div>
 </body>
