@@ -11,6 +11,7 @@
         <div>{{ x }}</div>
         {% empty %}  <!-- ใช้สำหรับแสดงผลตอนนที่ไม่มีข้อมูลให้วนลูป -->
         No Data   
+    
     {% endfor %}
     <ul> 
     {% for item in list %}
@@ -37,7 +38,57 @@
 	    <div>{{ k }}</div>
     {% endfor %}
 
+  <ul>
+        {% for i in range %}    
+        <li>
+            {% cycle 'One' 'Two' 'Three' 'Four' 'Five' %}  <!-- ใช้สำหรับใการวนข้อมูลใน tag cycle โดยยึดจำนวนรอบการวนตาม for -->
+        </li>
+        {% endfor %}
+    </ul>
 
+{# forloop.counter section #}
+
+    {% for x in list  %}
+        <div>รายการที่ {{ forloop.counter }}: {{ x }}</div>
+    {% endfor %}
+    <br>
+    {% for x in list %}
+        <div>list[{{ forloop.counter0 }}] = {{ x }}</div>
+    {% endfor %}
+    <br>
+
+{# forloop.revcounter reversed section #}
+
+{% for x in list  reversed%}
+        <div>รายการที่ {{ forloop.revcounter }}: {{ x }}</div>
+    {% endfor %}
+    <br>
+    {% for x in list reversed %}
+        <div>list[{{ forloop.revcounter0 }}] = {{ x }}</div>
+    {% endfor %}
+    <br>
+
+    <div style="background: powderblue; padding: 5px">
+    {% for _ in range %}
+
+    {# forloop.first and forloop.last #}
+
+        {% if forloop.first %}
+            <span style="font-weight: bold; color: gray">
+        {% else %}
+            <span style="font-weight: normal; color: blue">
+        {% endif %}
+
+        {% cycle 'Home' 'Products' 'Orders' 'Subscribe' 'Contact-Us' %}
+       
+        {% if not forloop.last %}
+            |
+        {% endif %}
+
+    {% endfor %}
+
+
+    
     </div>
 </body>
 </html>
