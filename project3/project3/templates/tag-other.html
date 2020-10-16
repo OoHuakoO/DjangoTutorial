@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!-- Lorem -->
+        
+  {% lorem 5 w %}
+    <br>
+    {% lorem 10 w %}
+    <br>
+    {% lorem 1 p %}
+    <br>
+    {% lorem 3 p %}
+
+  <!-- with -->
+ {% with a=10 b='Hello' c=1.23 d=list e=None f=False %}
+        a = {{ a }}<br>
+        b = {{ b}} <br>
+        d[1] = {{ d.2 }} <br>
+        {% if not f %}
+            {{ f }}
+        {% endif %}
+    {% endwith %}
+        
+        <script src="" async defer></script>
+    </body>
+</html>

@@ -36,4 +36,6 @@ def tag_for(request):
     }
     return render(request, 'tag-for.html', vars)
 
+def tag_other(request):
+    return render(request, 'tag-other.html', {'list':[1, 3, 5, 7]})
     

@@ -23,5 +23,6 @@ urlpatterns = [
     path('order/',views.order),
     path('variable/',views.variable),
     path('tag/if/', views.tag_if),
-    path('tag/for/', views.tag_for)
+    path('tag/for/', views.tag_for),
+    path('tag/other/', views.tag_other)
 ]
