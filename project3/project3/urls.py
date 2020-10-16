@@ -17,12 +17,14 @@ Including another URLconf
 from django.urls import path
 from . import views
 urlpatterns = [
-    path('', views.index),
+
     path('about/',views.about),
     path('detail/',views.detail),
     path('order/',views.order),
     path('variable/',views.variable),
     path('tag/if/', views.tag_if),
     path('tag/for/', views.tag_for),
-    path('tag/other/', views.tag_other)
+    path('tag/other/', views.tag_other),
+     path('', views.index, name='index')
+     pa
 ]
