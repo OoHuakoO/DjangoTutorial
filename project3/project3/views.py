@@ -39,3 +39,19 @@ def tag_for(request):
 def tag_other(request):
     return render(request, 'tag-other.html', {'list':[1, 3, 5, 7]})
     
+
+def tag_auto_escape(request):
+    data = {
+        'html_str': '<b>\'Tom\' & "Jerry"</b>',
+    }
+    return render(request, 'tag-auto-escape.html', data)
+    
+def filter_str_list_num(request):
+    data = {
+        'var_str': 'Hello World',
+        'var_list': ['One', 'Two', 'Three'],
+        'var_int': 2475,
+        'var_float': 3.14,
+        'var_none': None
+    }
+    return render(request, 'filter-str-list-num.html', data)    
