@@ -74,3 +74,10 @@ def filter_string(request):
         'str5': '<b><a href=#>Click Here</a> to download</b>'
     }
     return render(request, 'filter-string.html', data)
+
+def filter_list(request):
+    data = {
+        'var_list' : ['red','green','blue','yellow'],
+        'var_dict' : {'a':'ant','b':'boy','c':'cat','d':'dog'}
+    }
+    return render(request,'filter-list.html',data)

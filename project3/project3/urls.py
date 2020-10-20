@@ -29,6 +29,6 @@ urlpatterns = [
     path('tag/auto-escape/', views.tag_auto_escape),
     path('filter/str-list-num/', views.filter_str_list_num),
     path('filter/num/', views.filter_num),
-    path('filter/string/', views.filter_string)
-
+    path('filter/string/', views.filter_string),
+    path('filter/list',views.filter_list)
 ]
