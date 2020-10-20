@@ -42,7 +42,7 @@ def tag_other(request):
 
 def tag_auto_escape(request):
     data = {
-        'html_str': '<b>\'Tom\' & "Jerry"</b>',
+        'html_str': '<b>\'Tom\' & "Jerry"</b>', # /คั่นก่อนหน้าการใช้ 'ข้อความสำหรับการแสดง ' ในผลลัพธ์ด้วย #}
     }
     return render(request, 'tag-auto-escape.html', data)
     
@@ -55,7 +55,7 @@ def filter_str_list_num(request):
         'var_none': None
     }
     return render(request, 'filter-str-list-num.html', data)    
-    
+
 def filter_num(request):
     data = {
         'hahaha':555,
@@ -64,3 +64,13 @@ def filter_num(request):
         'num_float':1234.56789
     }
     return render(request, 'filter-num.html', data)   
+
+def filter_string(request):
+    data = {
+		'str1': 'Model Template View',
+		'str2': 'model<br> \nview<br> \n controller',
+		'str3': 'django is the web framework',
+		'str4': "<b>Don't repeat youself (DRY)</b>",
+        'str5': '<b><a href=#>Click Here</a> to download</b>'
+    }
+    return render(request, 'filter-string.html', data)
