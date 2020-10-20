@@ -55,3 +55,12 @@ def filter_str_list_num(request):
         'var_none': None
     }
     return render(request, 'filter-str-list-num.html', data)    
+    
+def filter_num(request):
+    data = {
+        'hahaha':555,
+        'filesize':387504257,
+        'num_int':1234,
+        'num_float':1234.56789
+    }
+    return render(request, 'filter-num.html', data)   
