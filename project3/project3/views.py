@@ -116,4 +116,4 @@ def filter_custom(request):
     from datetime import datetime
 
     now = datetime.today()
-    return render(request, 'filter-custom.html', {'a':10, 'now':now})
+    return render(request, 'filter-custom.html', {'a':10, 'now':now,'x':10})
