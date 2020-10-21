@@ -31,5 +31,8 @@ urlpatterns = [
     path('filter/num/', views.filter_num),
     path('filter/string/', views.filter_string),
     path('filter/list',views.filter_list),
-    path('filter/special-chars/', views.filter_special_chars)
+    path('filter/special-chars/', views.filter_special_chars),
+    path('filter/url/', views.filter_url),
+    path('filter/datetime/', views.filter_datetime),
+    path('filter/custom/', views.filter_custom)
 ]

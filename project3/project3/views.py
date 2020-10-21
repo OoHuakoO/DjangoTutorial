@@ -81,10 +81,39 @@ def filter_list(request):
         'var_dict' : {'a':'ant','b':'boy','c':'cat','d':'dog'}
     }
     return render(request,'filter-list.html',data)
-    
+
 def filter_special_chars(request):
 	data = {
 		'str1': 'I\'m using "Django"',
 		'str2': 'line1\nline2\nline3',
 	}
 	return render(request, 'filter-special-chars.html', data)
+
+def filter_url(request):
+	data = {
+		'str1': 'Please visit: www.example.com or https://go.to/xyz',
+		'str2': 'Send you data to admin@example.com',
+		'str3': 'Download at https://example.com/?file=django.zip'
+	}
+	return render(request, 'filter-url.html', data)
+
+def filter_datetime(request):
+    from datetime import datetime, date
+    from datetime import timedelta
+    now = datetime.today()
+    next_45_days = now + timedelta(days=45)
+    year = now.year
+    data = {
+        'now': now,
+        'next45days': next_45_days,
+        'newyear': date(year, 1, 1),
+        'valentine': date(year, 2, 14),
+        'oldyear':date(year, 12, 31)
+    }
+    return render(request, 'filter-datetime.html', data)
+
+def filter_custom(request):
+    from datetime import datetime
+
+    now = datetime.today()
+    return render(request, 'filter-custom.html', {'a':10, 'now':now})
