@@ -81,3 +81,10 @@ def filter_list(request):
         'var_dict' : {'a':'ant','b':'boy','c':'cat','d':'dog'}
     }
     return render(request,'filter-list.html',data)
+    
+def filter_special_chars(request):
+	data = {
+		'str1': 'I\'m using "Django"',
+		'str2': 'line1\nline2\nline3',
+	}
+	return render(request, 'filter-special-chars.html', data)

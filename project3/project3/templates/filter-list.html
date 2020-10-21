@@ -11,7 +11,19 @@
     </head>
     <body>
     <div style="font-size:large">
-  
+  {{ var_list|join:','}}<br>
+  {{var_dict.keys|join:'-'}}<br>
+  {{var_dict.values|join:'-'}}<br>
+  <br>
+  {{var_list|first}}<br>
+  {{var_list|last}}<br>
+  <br>
+  {{var_list|random}}<br>
+  <br>
+  {{var_list|slice:'1:3'}}<br>
+  {{var_list|slice:':3'}}<br>
+  <br>
+  {{var_list|unordered_list}}
         <script src="" async defer></script>
         </div>
     </body>
