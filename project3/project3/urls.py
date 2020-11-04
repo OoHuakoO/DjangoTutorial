@@ -34,5 +34,9 @@ urlpatterns = [
     path('filter/special-chars/', views.filter_special_chars),
     path('filter/url/', views.filter_url),
     path('filter/datetime/', views.filter_datetime),
-    path('filter/custom/', views.filter_custom)
+    path('filter/custom/', views.filter_custom),
+    
+    path('redirect/from/', views.redirect_from, name='redirect_from'),
+    path('redirect/to/', views.redirect_to, name='redirect_to'),
+    path('redirect/error/<int:code>/<str:text>/', views.redirect_error, name='redirect_error'),
 ]
