@@ -1,5 +1,6 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
+
 from datetime import date
 def index(request):
     return render(request,'index.html')
