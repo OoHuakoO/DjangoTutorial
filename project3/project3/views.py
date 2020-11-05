@@ -126,8 +126,8 @@ def redirect_from(request):
     if random.randint(1, 10) < 5:
         #return redirect('/redirect/to')            #ระบุตำแหน่งพาธโดยตรง (ไม่ยืดหยุ่น)
         #return redirect(redirect_to)               #ระบุชื่อฟังก์ชันวิว
-        return redirect('redirect_to')             #ระบุเป็นชื่อพาธ
-        #return redirect(reverse('redirect_to'))     #ระบุโดยนำชื่อพาธมาแปลงด้วยฟังก์ชัน reverse()
+        #return redirect('redirect_to')             #ระบุเป็นชื่อพาธ
+        return redirect(reverse('redirect_to'))     #ระบุโดยนำชื่อพาธมาแปลงด้วยฟังก์ชัน reverse()
     else:
         return redirect(redirect_error, code=123, text='Fetal Error')
         #return redirect('redirect_error', code=123, text='Unknown Error')
