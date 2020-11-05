@@ -118,3 +118,25 @@ def filter_custom(request):
 
     now = datetime.today()
     return render(request, 'filter-custom.html', {'a':10, 'now':now,'x':10})
+
+
+def redirect_from(request):
+    import random
+    
+    if random.randint(1, 10) < 5:
+        #return redirect('/redirect/to')            #ระบุตำแหน่งพาธโดยตรง (ไม่ยืดหยุ่น)
+        #return redirect(redirect_to)               #ระบุชื่อฟังก์ชันวิว
+        return redirect('redirect_to')             #ระบุเป็นชื่อพาธ
+        #return redirect(reverse('redirect_to'))     #ระบุโดยนำชื่อพาธมาแปลงด้วยฟังก์ชัน reverse()
+    else:
+        return redirect(redirect_error, code=123, text='Fetal Error')
+        #return redirect('redirect_error', code=123, text='Unknown Error')
+        #return redirect(reverse('redirect_error', kwargs={'code':123, 'text':'Unknown Error'}))
+        
+        
+def redirect_to(request):
+    return render(request, 'redirect-to.html')
+
+
+def redirect_error(request, code, text):
+    return render(request, 'redirect-error.html', {'code':code, 'text':text})
